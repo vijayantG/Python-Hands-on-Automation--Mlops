@@ -1,0 +1,21 @@
+Python Data Structures: Cheat Sheet for MLOps
+1. Overview
+Data structures organize data for efficient storage and retrieval. In Python, they are categorized by Mutability:
+
+Mutable (Changeable): Lists, Dictionaries, Sets.
+
+Immutable (Unchangeable): Tuples.
+
+2. Lists []
+Definition: Ordered, mutable, dynamic arrays that hold heterogeneous data (mix of types).
+
+Best for: Storing collections of items to loop through, or creating tables (list of lists).
+
+Pros: Easy to modify, great for nested data.
+
+Cons: Slower for math (use NumPy for speed), uses more memory.
+
+
+Add new data -- list.append() -- list.append(value)
+Remove the data -- list.remove() -- list.remove(value)
+change the data by index -- list[2] = 40 -- list[index] = value
