@@ -19,3 +19,35 @@ Cons: Slower for math (use NumPy for speed), uses more memory.
 Add new data -- list.append() -- list.append(value)
 Remove the data -- list.remove() -- list.remove(value)
 change the data by index -- list[2] = 40 -- list[index] = value
+
+3. Dictionaries {}
+Definition: Mutable, unordered (but insertion-ordered since Python 3.7) collections of Key-Value pairs. Keys must be unique and immutable.
+
+Best for: Storing configurations (Hyperparameters), JSON-like data, and scenarios requiring high-speed data retrieval.
+
+Pros: 
+Speed: Extremely fast lookups (Constant Time) regardless of size.
+Readability: Clearer than lists for mapping relationships (e.g., model_id: accuracy).
+Flexibility: Supports nested structures (Dictionaries within Dictionaries).
+
+Cons:  Memory: High RAM consumption compared to lists.
+
+Key Restrictions: Only immutable objects (like strings/tuples) can be keys.
+
+
+Add / Update:  Use data["new_key"] = value. Pro Tip: If you need to add many items at once from another dictionary, use data.update(new_dict).
+
+Remove: Use .pop("key") instead of del.
+Pro Tip: .pop() is safer because it returns the value being removed and allows a default value to prevent crashes if the key is missing: data.pop("old_metric", None).
+
+Change: Same as adding: data["existing_key"] = new_value.
+
+
+Add/Update	data["key"] = val	Simple and direct.
+Safe Access	.get(key, default)	Critical: Prevents crashes in automation.
+Safe Remove	.pop(key, None)	Prevents KeyError if key is already gone.
+Processing	.items()	Most efficient for metric summaries.
+Merging	`dict1	dict2`
+
+
+
