@@ -42,7 +42,6 @@ Pro Tip: .pop() is safer because it returns the value being removed and allows a
 
 Change: Same as adding: data["existing_key"] = new_value.
 
-
 Add/Update	data["key"] = val	Simple and direct.
 Safe Access	.get(key, default)	Critical: Prevents crashes in automation.
 Safe Remove	.pop(key, None)	Prevents KeyError if key is already gone.

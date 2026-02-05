@@ -45,5 +45,4 @@ print(f"d2 after adding new key-value pair: {d2}")
 # Remove the key "Two" from the dictionary d2
 
 d2.pop("Two")
-
 print(f"d2 after removing key 'Two': {d2}")
