@@ -16,6 +16,7 @@ Pros: Easy to modify, great for nested data.
 Cons: Slower for math (use NumPy for speed), uses more memory.
 
 
+
 Add new data -- list.append() -- list.append(value)
 Remove the data -- list.remove() -- list.remove(value)
 change the data by index -- list[2] = 40 -- list[index] = value
@@ -49,4 +50,43 @@ Processing	.items()	Most efficient for metric summaries.
 Merging	`dict1	dict2`
 
 
+4. Sets { }Definition: Unordered collections of unique, set is mutable but element is inside the set is immutable. They do not allow duplicate values.
 
+Best for: Removing duplicates from data, high-speed membership testing, and comparing two datasets (Mathematical operations).
+
+Pros:  Uniqueness: Automatically deduplicates any data you add.Speed: Extremely fast ($O(1)$) for checking if an item exists—much faster than Lists.
+
+Logic: Built-in math operations like Union and Intersection make comparing datasets easy.
+
+Cons:  Unordered: Does not keep the order of items; you cannot use indexes (e.g., s[0] fails).
+
+Hashable Only: You can only store immutable items (no lists or dicts inside).
+
+Add new data: set.add(value) — Adds a single element.
+
+Remove data: set.discard(value) — Pro Tip: Use .discard() instead of .remove() because it won't crash your script if the value is missing.
+
+Change data: Since sets are unordered, you cannot change an item by index. You must discard() the old value and add() the new one.
+
+
+5. Tuples ( )
+
+Definition: Ordered, immutable sequences of elements. Once created, their size and contents cannot be changed.
+
+Best for: Data that should never change (Constants), coordinates, or using multiple values as a single Dictionary Key.
+
+Pros: * Safety: Guaranteed that the data won't be modified by mistake during a long MLOps pipeline.
+
+Hashable: Can be used as Dictionary Keys (unlike lists), which is great for mapping (e.g., (user_id, date): "login_event").
+
+Faster Access: Slightly faster than lists for iteration.
+
+Cons: * Fixed Size: Cannot add or remove elements (you must create a new tuple to "change" it).
+
+Less Flexible: Cannot be copied or sorted in place.Add/Change data: Not Possible. 
+
+If you must change a tuple, you have to convert it to a list first:temp_list = list(my_tuple) and  append the temp_list.append(val) $\rightarrow$ my_tuple = tuple(temp_list).
+
+Remove data: Not Possible.
+
+You can only delete the entire tuple from memory using del my_tuple.Access data: my_tuple[index] — Same as lists (e.g., t1[0]).
